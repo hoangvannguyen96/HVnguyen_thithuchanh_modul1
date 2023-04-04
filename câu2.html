@@ -9,15 +9,20 @@
   <body>
     <script>
       let a = [1, 2, 3, 4, 5];
-      let b = prompt("nhập số cần tìm vị trí");
-      let index;
+      let b = +prompt('nhập số cần tìm vị trí')
       function returnIndex(x, y) {
+        let index
+        let check = false;
         for (let i = 0; i < y.length; i++) {
           if (x == y[i]) {
-            return index = i;
-          } else{
-             return alert(b +" "+"không nằm trong mảng")          
+            index = i;
+            check = true;
           }
+        }
+        if (check) {
+          return index;
+        } else {
+          return false;
         }
       }
       document.write(returnIndex(b, a));

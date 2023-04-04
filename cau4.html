@@ -22,7 +22,7 @@
             getEmail(){
                 return this.email
             }
-            toString(david){
+            toString(){
                 return this.fullname+" "+ this.email
             }
         }
@@ -34,13 +34,11 @@
         document.write(david.toString())
         let david1=new Staff('david1','david1@gmail.com')
         let david2=new Staff('david2','david2@gmail.com')
-        david1.toString()
         document.write("<br>")
-        document.write(david1)
-        document.write("<br>")
-        david2.toString()
-        document.write(david2)
-        document.write("<br>")
+        let arr=[david,david1,david2]
+        for(let i=0;i<arr.length;i++){
+            document.write(arr[i].toString()+'<br>') 
+        }
 
 
 
