@@ -13,10 +13,10 @@
       let index;
       function returnIndex(x, y) {
         for (let i = 0; i < y.length; i++) {
-          if (x != y[i]) {
-            alert(b +" "+"không nằm trong mảng");
-          } else if (y[i] == x) {
+          if (x == y[i]) {
             index = i;
+          } else{
+            alert(b +" "+"không nằm trong mảng")          
           }
         }
         return index;
