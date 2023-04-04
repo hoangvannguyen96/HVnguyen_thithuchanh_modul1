@@ -8,33 +8,16 @@
   </head>
   <body>
     <script>
-      let a = "tyu";
-      function countVowel(x) {
-        let b = [];
-        b = String(x).split("");
-        let check = true;
-        let c = [];
-        for (let i = 0; i < b.length; i++) {
-          let check = false;
-          if (
-            b[i] == "a" ||
-            b[i] == "e" ||
-            b[i] == "i" ||
-            b[i] == "o" ||
-            b[i] == "u"
-          ) {
-            c.push(b[i]);
-            check = true;
-          }
+      let a = ["a", "o", "e", "u", "i"];
+      function countVowel(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (a.indexOf(arr[i].toLocaleLowerCase()) != -1) count++;
         }
-        if (check) {
-          return c
-        } else {
-          return document.write("chuỗi không có ký tự nguyên âm nào");
-        }
+        return count;
       }
-      countVowel(a)
-      document.write(a)
+      let array = prompt("Nhập vào một chuỗi");
+      document.write("Số lượng ký tự nguyên âm trong mảng là: " + countVowel(array));
     </script>
   </body>
 </html>
