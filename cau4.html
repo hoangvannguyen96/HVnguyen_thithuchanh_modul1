@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Staff{
+            constructor(fullname,email){
+                this.fullname=fullname
+                this.email=email
+            }
+            setFullname(fullname){
+                return this.fullname=fullname
+            }
+            setEmail(email){
+                return this.email=email
+            }
+            getEmail(){
+                return this.email
+            }
+            toString(david){
+                return this.fullname+" "+ this.email
+            }
+        }
+        let david=new Staff('David',"david@gmail.com")
+        document.write(david.setFullname('David Do'))
+        document.write("<br>")
+        document.write(david.setEmail('david.do@gmail.com'))
+        document.write("<br>")
+        document.write(david.toString())
+        let david1=new Staff('david1','david1@gmail.com')
+        let david2=new Staff('david2','david2@gmail.com')
+        david1.toString()
+        document.write("<br>")
+        document.write(david1)
+        document.write("<br>")
+        david2.toString()
+        document.write(david2)
+        document.write("<br>")
+
+
+
+        
+
+    </script>
+</body>
+</html>
